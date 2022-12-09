@@ -1,9 +1,13 @@
 import React from 'react';
+import Navbar from '../Navbar/Navbar';
 
-const Categories = () => (
-  <div>
-    <h1>Categories page</h1>
-  </div>
-);
+function Categories() {
+  return (
+    <div>
+      <Navbar />
+      <button type="button">Check Status</button>
+    </div>
+  );
+}
 
 export default Categories;

@@ -1,17 +1,15 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Navbar from './Components/Navbar/Navbar';
+import { Route, Routes } from 'react-router-dom';
 import Books from './Components/Pages/Books';
 import Categories from './Components/Pages/Categories';
 
-const App = () => (
-  <div className="App">
-    <Navbar />
+function App() {
+  return (
     <Routes>
-      <Route to="/" element={<Books />} />
-      <Route to="/categories" element={<Categories />} />
+      <Route path="/" element={<Books />} />
+      <Route path="/categories" element={<Categories />} />
     </Routes>
-  </div>
-);
+  );
+}
 
 export default App;
