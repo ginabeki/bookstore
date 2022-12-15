@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../../redux/books/books';
+import { addBookOne, addBooks } from '../../redux/books/books';
 
 function Form() {
   const dispatch = useDispatch();
@@ -19,16 +19,16 @@ function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const data = {
       ...book,
-      id: Date.now().toString(),
+      category: 'comedy',
+      item_id: Date.now().toString(),
     };
-
     if (book.title.length > 0 && book.title.length > 0) {
-      dispatch(addBook(data));
+      dispatch(addBooks(data)).then(() => {
+        dispatch(addBookOne(data));
+      });
     }
-
     setBook({
       title: '',
       author: '',
