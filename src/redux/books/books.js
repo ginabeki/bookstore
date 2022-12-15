@@ -1,5 +1,4 @@
 /* eslint-disable no-param-reassign */
-
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const APP_ID = 'qFUIeHgxhAoz2HaktTwd';
