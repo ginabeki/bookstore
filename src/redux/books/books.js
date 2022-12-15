@@ -1,4 +1,20 @@
-const initialState = [];
+const initialState = [
+  {
+    id: '1',
+    title: 'The Hunger Games',
+    author: 'Suzanne Collins',
+  },
+  {
+    id: '2',
+    title: 'A Place Called Home',
+    author: 'Preeti Shenoy',
+  },
+  {
+    id: '3',
+    title: 'Queen of Fire',
+    author: 'Roger Faligot',
+  },
+];
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
 
